@@ -62,13 +62,13 @@ padding: 10px;
 
 
 
-.contenedor{
+/*.contenedor{
     width: 300px;
     height: 500px;
     overflow: hidden;
     background-color: red;
 	background-image:url(../../images/background.jpg);
-}
+}*/
 
 .fomulario_ingreso {
 	position:absolute;
