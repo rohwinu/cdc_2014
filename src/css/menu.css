@@ -85,12 +85,12 @@ padding: 10px;
 	border-bottom: 0 !important;
 		}
 
-/*.ui-page.ui-body-c {
+.ui-page.ui-body-c {
     background: url(../../images/background.jpg);
     background-repeat:no-repeat;
     background-position:center center;
     background-size:cover;  
-}*/
+}
 
 /*elimino barra superior*/
 .ui-bar-a {
