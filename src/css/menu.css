@@ -86,7 +86,7 @@ padding: 10px;
 		}
 
 .ui-page.ui-body-c {
-    background: url(../../images/background.jpg);
+    /*background: url(../../images/background.jpg);*/
     background-repeat:no-repeat;
     background-position:center center;
     background-size:cover;  
