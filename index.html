@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Hello World</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/jquery-1.6.4.js"></script>
+        <script src="js/jquery.mobile-1.1.0.js"></script>
+        <link href="css/jquery.mobile.structure-1.1.0.css" rel="stylesheet">
+        <link href="css/jquery.mobile.theme-1.1.0.css" rel="stylesheet">
+        <!-- slide icons-->
+        <script src="js/menu.js"></script>
+        <link href="css/menu.css" rel="stylesheet">
+        <!-- Fin slide icons-->
+        
+    </head>
+    <body>
+        <div data-role="page" id="page1">
+            <div data-role="header">
+                <div id="img">
+                    <img src="img/logo.png" style="display: block; margin: 0 auto">
+                </div>
+            </div>
+            <div data-role="content">
+                
+                <fieldset class="ui-grid-b">
+                    <div class="ui-block-a"></div>
+                    <div class="ui-block-b">
+                    	<div id="img2"></div>
+                        <div class="ui-field-contain">
+                            <label for="textinput-fc">Text Input:</label>
+                            <input type="text" name="textinput-fc" id="textinput-fc" placeholder="Text input" value="">
+                            <label for="textinput-fc">Text Input:</label>
+                            <input type="text" name="textinput-fc" id="textinput-fc" placeholder="Text input" value="">
+                            <button class="ui-shadow ui-btn ui-corner-all">Enviar</button>
+                            
+                        </div>
+                    </div>
+                    <div class="ui-block-c"></div>
+                </fieldset>
+                
+            
+            <!--<div id="img" class="circulo_formulario">
+           	  <img src="img/rcircle_new.png" style="display: block; margin: 0 auto"/> </div>
+            
+              <div class="cont_form">
+                  <div class="div-widget1">
+                    <form action="http://" method="POST">
+                            <div data-role="fieldcontain">
+                                <label for="text1">Usuario</label><br />
+                                <input type="text" id="text1" placeholder="Usuario">
+                            </div>
+                      <div data-role="fieldcontain">
+                                <label for="text2">Clave</label><br />
+                                <input type="text" id="text2" placeholder="Clave">
+                        </div>
+                        <a href="#" data-role="button" data-icon="home" data-iconpos="left"  data-inline="true" data-mini="true">Acceso a Plataforma</a>
+                          
+                    </form>
+                    </div>
+                </div>
+        <h4 class="sol_clave">Aún no tienes tu clave? <br /> Solicítala aquí</h4>-->
+                
+            </div>
+            <div data-role="footer" data-position="fixed">
+           <div class="botonera" data-role="navbar">
+                    <ul>
+                        <li>
+                            <a href="#page2" data-role="button" data-transition="flip" data-theme="b"><img src="img/servicios.png" width="64" height="88" alt=""/></a>
+                        </li>
+                        <li>
+                            <a data-role="button" data-theme="b"><img src="img/nosotros.png" width="64" height="80" alt=""/></a>
+                        </li>
+                        <li>
+                            <a data-role="button" data-theme="b"><img src="img/pruebas.png" width="64" height="82" alt=""/></a>
+                        </li>
+                        <li>
+                            <a data-role="button" data-theme="b"><img src="img/ubicacion.png" width="64" height="82" alt=""/></a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        </div>
+        <div data-role="page" id="page2">
+            <div data-role="header">
+                <div>
+                    <img src="img/logo.png" style="display: block; margin: 0 auto">
+                </div>
+            </div>
+            <div data-role="content">
+                <div class="div-widget">
+                    <span>hola soy la página 2</span>
+                </div>
+                <div data-role="collapsible">
+                    <h1>Collapsible Area</h1>
+                    hola
+                </div>
+                <div data-role="collapsible">
+                    <h1>Collapsible Area</h1>
+                </div>
+                
+                <!--la botonera-->
+                <div id="sliderWrap">
+    		<div id="openCloseIdentifier"></div>
+    		<div id="slider">
+    			<div id="sliderContent">
+    				Isn't this nice?
+    			</div>
+    			<div id="openCloseWrap">
+    				<a href="#" class="topMenuAction" id="topMenuImage">
+    					<img src="img/close.png" alt="open" />
+    				</a>
+    			</div>
+    		</div>
+    	</div>
+                
+                <!--Fin la botonera-->
+                
+            </div>
+            <div data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a href="#page1" data-role="button" data-transition="slide" data-theme="b">Button</a>
+                        </li>
+                        <li>
+                            <a data-role="button" data-theme="b">Button</a>
+                        </li>
+                        <li>
+                            <a data-role="button" data-theme="b">Button</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div
+        ><script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
