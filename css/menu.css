@@ -87,12 +87,17 @@ padding: 10px;
 	border-bottom: 0 !important;
 		}
 
-.ui-page.ui-body-c {
-    background: url(../img/background.jpg);
+
+.ui-page{
+  background: url(../img/background.jpg);
+  
     background-repeat:no-repeat;
     background-position:center center;
     background-size:cover;  
+
 }
+
+
 
 /*elimino barra superior*/
 .ui-bar-a {
@@ -134,6 +139,17 @@ width: auto\9;
 	}
 
 
+	
+.botonera .ui-btn-inner{
+		padding:0 !important;
+	}	
+
+/*para roderar texto con imagen*/
+
+.align-left {
+float: left;
+margin: 5px 15px 0 0;
+/*fin*/
 
 @media only screen and (max-width: 400px) {
   #images2 {

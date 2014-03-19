@@ -2,8 +2,11 @@ body {
 margin: 0;
 font-size:16px;
 color: #000000;
+background-color:#F30004;
 font-family:Arial, Helvetica, sans-serif;
 }
+
+
 #sliderWrap {
 margin: 0 auto;
 width: 300px;
@@ -85,12 +88,12 @@ padding: 10px;
 	border-bottom: 0 !important;
 		}
 
-.ui-page.ui-body-c {
+/*.ui-page.ui-body-c {
     background: url(../../images/background.jpg);
     background-repeat:no-repeat;
     background-position:center center;
     background-size:cover;  
-}
+}*/
 
 /*elimino barra superior*/
 .ui-bar-a {
@@ -139,9 +142,9 @@ width: auto\9;
     background-repeat:no-repeat;
     background-position:center center;
     background-size:cover;  
-background-color:red;
-width: 0;
-height: 0;
+	background-color:red;
+	width: 0;
+	height: 0;
 }
                 }
 
