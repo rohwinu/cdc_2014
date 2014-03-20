@@ -35,84 +35,110 @@
         <script src="js/menu.js"></script>
         <link href="css/menu.css" rel="stylesheet">
         <!-- Fin slide icons-->
+		
+        
+        <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+        <style type="text/css">
+		div.gallery-row:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
+		div.gallery-item { float: left; width: 33.333333%; }
+		div.gallery-item a { display: block; margin: 5px; border: 1px solid #3c3c3c; }
+		div.gallery-item img { display: block; width: 100%; height: auto; }
+		#ubicacion .ui-content, #Gallery2 .ui-content { overflow: hidden; }
+		</style>
+
+		
+		<script type="text/javascript" src="file:///C|/wamp/www/1.0.11/lib/jquery-1.6.1.min.js"></script>
+        <script type="text/javascript" src="file:///C|/wamp/www/1.0.11/lib/jquery.mobile-1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+        
+		<script type="text/javascript" src="js/simple-inheritance.min.js"></script>
+		<script type="text/javascript" src="js/jquery.animate-enhanced.min.js"></script>
+		<script type="text/javascript" src="js/code-photoswipe-jQuery-1.0.11.js"></script>
+	
+    	<script type="text/javascript">
+		/*
+			This example shows how to set up PhotoSwipe using jQuery Mobile.
+		*/
+		
+		$(document).ready(function(){
+			
+			$('div.gallery-page').live('pageshow', function(e){
+					
+				// Re-initialize with the photos for the current page
+				$("div.gallery a", e.target).photoSwipe();
+				return true;
+				
+			})
+				
+		});
+	
+	</script>
+    
+        
         
     </head>
     <body>
         <div data-role="page" data-theme="b" id="page1">
             <div data-role="header">
-                <div id="img">
-                    <img src="img/logo.png" style="display: block; margin: 0 auto">
+                <div id="img3">
+                    <img src="img/logo_v2.png" width="260">
                 </div>
             </div>
             <div data-role="content">
-                
-                <fieldset class="ui-grid-b">
-                    <div class="ui-block-a"></div>
-                    <div class="ui-block-b">
-                    	<div id="img2"></div>
-                        <div class="ui-field-contain">
-                            <label for="textinput-fc">Text Input:</label>
-                            <input type="text" name="textinput-fc" id="textinput-fc" placeholder="Text input" value="">
-                            <label for="textinput-fc">Text Input:</label>
-                            <input type="text" name="textinput-fc" id="textinput-fc" placeholder="Text input" value="">
-                            <button class="ui-shadow ui-btn ui-corner-all">Enviar</button>
-                            
+            <div class="home-content" style="margin-top: -100px;" >
+					<span id="Logo" class="svg">
+                        <img src="img/circle.svg" width="306">
+                        <div class="ui-block-b" style="margin-top: -250px; margin-left:25%; z-index:10; position:absolute; text-transform:none">
+                            <label for="basic" >Usuario</label>
+                            <input type="text" name="name" id="basic" value=""  />
+                            <label for="basic">Clave</label>
+                            <input type="password" name="name" id="basic" value=""  />
+                            <button class="ui-shadow ui-btn ui-corner-all" data-icon="home">Consultar</button>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                        <h4 class="sol_clave" style="text-transform:none">Aún no tienes tu clave? <br /> Solicítala aquí</h4>
                         </div>
-                    </div>
-                    <div class="ui-block-c"></div>
-                </fieldset>
-                
+					</span>
+			</div>
             
-            <!--<div id="img" class="circulo_formulario">
-           	  <img src="img/rcircle_new.png" style="display: block; margin: 0 auto"/> </div>
             
-              <div class="cont_form">
-                  <div class="div-widget1">
-                    <form action="http://" method="POST">
-                            <div data-role="fieldcontain">
-                                <label for="text1">Usuario</label><br />
-                                <input type="text" id="text1" placeholder="Usuario">
-                            </div>
-                      <div data-role="fieldcontain">
-                                <label for="text2">Clave</label><br />
-                                <input type="text" id="text2" placeholder="Clave">
-                        </div>
-                        <a href="#" data-role="button" data-icon="home" data-iconpos="left"  data-inline="true" data-mini="true">Acceso a Plataforma</a>
-                          
-                    </form>
-                    </div>
-                </div>
-        <h4 class="sol_clave">Aún no tienes tu clave? <br /> Solicítala aquí</h4>-->
+        
+        
                 
             </div>
             <div data-role="footer" data-position="fixed">
            <div class="botonera" data-role="navbar">
                     <ul>
                         <li>
-                            <a href="#servicios" data-role="button" data-transition="flip" data-theme="b"><img src="img/servicios.png" alt="" width="112" height="122"/></a>
+                            <a href="#servicios" data-role="button" data-transition="pop" data-theme="b"><img src="img/servicios.png" alt="" width="112" height="122"/></a>
                         </li>
-                        <li><a href="#nosotros" data-role="button" data-transition="slidedown" data-theme="b"><img src="img/nosotros.png" width="112" height="122" alt=""/></a></li>
+                        <li><a href="#nosotros" data-role="button" data-transition="pop" data-theme="b"><img src="img/nosotros.png" width="112" height="122" alt=""/></a></li>
                         <li>
-                            <a data-role="button" data-theme="b"><img src="img/pruebas.png" width="112" height="122" alt=""/></a>
+                            <a href="#pruebas" data-role="button" data-transition="pop" data-theme="b"><img src="img/pruebas.png" width="112" height="122" alt=""/></a>
                         </li>
                         <li>
-                            <a href="#ubicacion" data-role="button" data-transition="flip" data-theme="b"><img src="img/ubicacion.png" width="112" height="122" alt=""/></a>
+                            <a href="#ubicacion" data-role="button" data-transition="pop" data-theme="b"><img src="img/ubicacion.png" width="112" height="122" alt=""/></a>
                         </li>
                     </ul>
                 </div>
         </div>
         </div>
+        
+        <!--servicios-->
         <div data-role="page" id="servicios" data-theme="b">
             <div data-role="header">
-                <div>
-                    <img id="home" src="img/logo.png" style="display: block; margin: 0 auto" onClick="ocultar(); return false;">
+               <div id="img3">
+                    <img src="img/logo_v2.png" width="260" style="display:block; margin:0 auto">
                 </div>
             </div>
             <div data-role="content">
                 <div data-role="collapsible" data-collapsed="false" style="text-shadow:none; color:#FFFFFF; text-transform:none">
                     <h1>Servicios</h1>
                     <p><strong>El Centro de Diagnostico Clínico CDC</strong>, ofrece a sus usuarios los servicios de laboratorio en: 
-                  <ul>
+                  
+                  <div class="ui-grid-a">
+			<div class="ui-block-a"><ul>
                     	<li>Coagulación</li>
                         <li>Electroforesis de proteínas</li>
                         <li>Hematología Clínica</li>
@@ -121,7 +147,13 @@
                         <li>Microbiología</li>
                         <li>Química Clínica</li>
                         <li>Uroanálisis</li>
-                    </ul>
+                    </ul></div>
+			<div class="ui-block-b" style="text-align:center">
+			 <img src="img/balon1.png" height="225" alt=""/></div>
+		</div>
+                  
+                  
+                  
                     </p>
                 </div>
                 <div data-role="collapsible"  style="text-shadow:none; color:#FFFFFF; text-transform:none">
@@ -154,14 +186,14 @@
            <div class="botonera" data-role="navbar"  data-tap-toggle="false">
                     <ul>
                         <li>
-                            <a href="#servicios" data-role="button" data-transition="flip" data-theme="b"><img src="img/servicios.png" alt="" width="112" height="122"/></a>
+                            <a href="#page1" data-role="button" data-transition="flip" data-theme="b"><img src="img/inicio.png" alt="" width="112" height="122"/></a>
                         </li>
-                        <li><a href="#nosotros" data-role="button" data-transition="slidedown" data-theme="b"><img src="img/nosotros.png" width="112" height="122" alt=""/></a></li>
+                        <li><a href="#nosotros" data-role="button" data-transition="pop" data-theme="b"><img src="img/nosotros.png" width="112" height="122" alt=""/></a></li>
                         <li>
                             <a data-role="button" data-theme="b"><img src="img/pruebas.png" width="112" height="122" alt=""/></a>
                         </li>
                         <li>
-                            <a href="#ubicacion" data-role="button" data-transition="flip" data-theme="b"><img src="img/ubicacion.png" width="112" height="122" alt=""/></a>
+                            <a href="#ubicacion" data-role="button" data-transition="pop" data-theme="b"><img src="img/ubicacion.png" width="112" height="122" alt=""/></a>
                         </li>
                     </ul>
                 </div>
@@ -171,63 +203,138 @@
         <!--pagina 3-->
     <div data-role="page" id="nosotros">
             <div data-role="header">
-                <div>
-                    <img src="img/logo.png" style="display: block; margin: 0 auto">
+                <div id="img3">
+                    <img src="img/logo_v2.png" width="260" style="display:block; margin:0 auto">
                 </div>
             </div>
             <div data-role="content">
             
-              <p  class="ui-body" style="text-align: justify; color:#FFFFFF; text-shadow:none; text-transform:none;"><img src="img/rcircle_new.png" width="85" alt="img" class="align-left imgbox">El <strong>CDC Centro de Diagnóstico Clínico</strong>; es un laboratorio clínico de I, II, III y IV nivel que cubre las necesidades de resultados confiables y oportunos que presenta la región; contamos con el respaldo y asesoría de un Médico Internista Nefrólogo y un Hemato Oncólogo. La experiencia de nuestro recurso humano garantiza la excelencia en cada uno de los procesos de toma de muestras, procesamiento, elección de reactivos, control de calidad interno, externo e informe de resultados lo que garantiza una total confiabilidad y oportunidad. <br/>
+                <p  class="ui-body" style="text-align: justify; color:#FFFFFF; text-shadow:none; text-transform:none;">
+                <img src="img/nosotros_1.png" width="125" alt="img" class="align-left imgbox">
+                El <strong>CDC Centro de Diagnóstico Clínico</strong>; es un laboratorio clínico de I, II, III y IV nivel que cubre las necesidades de resultados confiables y oportunos que presenta la región; contamos con el respaldo y asesoría de un Médico Internista Nefrólogo y un Hemato Oncólogo. La experiencia de nuestro recurso humano garantiza la excelencia en cada uno de los procesos de toma de muestras, procesamiento, elección de reactivos, control de calidad interno, externo e informe de resultados lo que garantiza una total confiabilidad y oportunidad. <br/>
                 <br/>
-               Nuestro laboratorio está basado en los más altos estándares de calidad, con equipos de última generación y el respaldo técnico-científico de <strong>Roche Diagnostics</strong> en equipos y reactivos; contamos con el sistema de código de barras para la identificación de las muestras lo cual garantiza la eficacia y rapidez en su manejo evitando posibles errores</p> 
-             
-             
+                Nuestro laboratorio está basado en los más altos estándares de calidad, con equipos de última generación y el respaldo técnico-científico de <strong>Roche Diagnostics</strong> en equipos y reactivos; contamos con el sistema de código de barras para la identificación de las muestras lo cual garantiza la eficacia y rapidez en su manejo evitando posibles errores</p> 
+               
+           	<div data-role="collapsible" data-collapsed="true" style="text-shadow:none; color:#FFFFFF; text-transform:none; padding:.4em 15px">
+                    <h1>CDC Kids</h1>
+                    <p>Los niños y niñas tienen ahora un sitio para toma de muestras con instalaciones agradables 
+                    </p>
+                </div>
                                               
             </div>
             <div data-role="footer">
            <div class="botonera" data-role="navbar"  data-position="fixed" data-fullscreen="true">
                     <ul>
                         <li>
-                            <a href="#servicios" data-role="button" data-transition="flip" data-theme="b"><img src="img/servicios.png" alt="" width="112" height="122"/></a>
-                        </li>
-                        <li><a href="#nosotros" data-role="button" data-transition="slidedown" data-theme="b"><img src="img/nosotros.png" width="112" height="122" alt=""/></a></li>
-                        <li>
-                            <a data-role="button" data-theme="b"><img src="img/pruebas.png" width="112" height="122" alt=""/></a>
+                            <a href="#servicios" data-role="button" data-transition="pop" data-theme="b"><img src="img/servicios.png" alt="" width="112" height="122"/></a>
                         </li>
                         <li>
-                            <a href="#ubicacion" data-role="button" data-transition="flip" data-theme="b"><img src="img/ubicacion.png" width="112" height="122" alt=""/></a>
+							<a href="#page1" data-role="button" data-transition="flip" data-theme="b"><img src="img/inicio.png" alt="" width="112" height="122"/></a>
+                        </li>
+                        
+                        <li>
+                            <a href="#pruebas" data-role="button" data-transition="pop" data-theme="b"><img src="img/pruebas.png" width="112" height="122" alt=""/></a>
+                        </li>
+                        <li>
+                            <a href="#ubicacion" data-role="button" data-transition="pop" data-theme="b"><img src="img/ubicacion.png" width="112" height="122" alt=""/></a>
                         </li>
                     </ul>
                 </div>
         </div>
         </div>
         
-        <!--ubicacion-->
-        <div data-role="page" id="ubicacion">
-            <div data-role="header">
-                <div>
-                    <img src="img/logo.png" style="display: block; margin: 0 auto">
+        <!--pruebas-->
+        <div data-role="page" id="pruebas" class="gallery-page">
+           <div id="img3">
+                    <img src="img/logo_v2.png" width="260" style="display:block; margin:0 auto">
                 </div>
-            </div>
             <div data-role="content">
             
-              <a data-ajax="false" href="tel:18005551234" id="cell" data-icon="custom" data-theme="b" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="top" data-inline="true" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-b"><span class="ui-btn-inner"><span class="ui-btn-text">Call Us</span><span class="ui-icon ui-icon-custom ui-icon-shadow">&nbsp;</span></span></a>
-              
-              <li class="ui-block-b"><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope ui-btn ui-btn-icon-top ui-btn-up-a" data-icon="custom" data-theme="a"><span class="ui-btn-inner"><span class="ui-btn-text">Email</span><span class="ui-icon ui-icon-custom ui-icon-shadow"></span></span></a></li>
+              <div data-role="collapsible"  style="text-shadow:none; color:#000000; text-transform:none; padding:.4em 15px">
+                    <h1>F</h1>
+                    <div data-role="collapsible"  style="text-shadow:none; color:#000000; text-transform:none;">
+                    <h1>Fosfata Acida</h1>
+                    <p>FOSFATASA ÁCIDA PROSTÁTICA (FAP)
+Información: Se conoce como fosfatasa ácida a un grupo de fosfatasas no específicas que se originan en hígado, bazo y se encuentran en una gran variedad de tejidos, como epitelio 
+glandular de próstata, testículo, riñón, pulmón, bazo, vejiga, hígado, pancreas y aorta. Se han identificado varias isoenzimas y la 2 es la más importante, que se denomina fosfatasa ácida próstatica ( PAP). Se localiza en las vesículas y vacuolas citoplasmáticas del epitelio glandular. Normalmente su producción es mínima y la mayor parte es vertida al semen y orina.
+Usos: De gran utilidad en el diagnóstico de carcinoma prostático y en la evolución de éste. 
+También se encuentra aumentada en mieloma múltiple,enfermedad de Paget, de Gaucher e 
+insuficiencia renal. También en metástasis de mama y óseas independiente de su origen.
+Normales: En un alto porcentaje de pacientes la PAP no se detecta pero cifras comprendidas entre 0.6 milésimas de miligramo (nanogramo) a 1.0 ng/mL se consideran normales.
+Interpretación: En carcinoma prostático, niveles elevados son compatibles con metástasis ósea. Ofrece buen pronóstico cuando las cifras bajan con el tratamiento en contra a las cifras 
+estables o persistentemente elevadas.
+Datos Accesorios: El tacto rectal eleva su concentración. Al encontrarse en el semen, su investigación en el caso de posible violación, es de gran utilidad.
+Toma de Muestra: La dosificación se verifica en suero.
+Limitaciones: No las tiene.
+Preparación: No es necesario estar en ayunas.
+Información: Se informa según el método empleado en Unidades Internacionales, King-Armstrong, 
+Bodanski que el laboratorio debe especificar con sus valores de referencia. </p>
+
+                    
+                    
+               		</div>
+                  
+               </div>
                                               
             </div>
             <div data-role="footer">
            <div class="botonera" data-role="navbar"  data-position="fixed" data-fullscreen="true">
                     <ul>
                         <li>
-                            <a href="#servicios" data-role="button" data-transition="flip" data-theme="b"><img src="img/servicios.png" alt="" width="112" height="122"/></a>
+                            <a href="#servicios" data-role="button" data-transition="pop" data-theme="b"><img src="img/servicios.png" alt="" width="112" height="122"/></a>
                         </li>
-                        <li><a href="#nosotros" data-role="button" data-transition="slidedown" data-theme="b"><img src="img/nosotros.png" width="112" height="122" alt=""/></a></li>
+                        <li><a href="#nosotros" data-role="button" data-transition="pop" data-theme="b"><img src="img/nosotros.png" width="112" height="122" alt=""/></a></li>
                         <li>
-                            <a data-role="button" data-theme="b"><img src="img/pruebas.png" width="112" height="122" alt=""/></a>
+                            <a href="#page1" data-role="button" data-transition="flip" data-theme="b"><img src="img/inicio.png" alt="" width="112" height="122"/></a>
                         </li>
                         <li>
-                            <a href="#ubicacion" data-role="button" data-transition="flip" data-theme="b"><img src="img/ubicacion.png" width="112" height="122" alt=""/></a>
+                            <a href="#ubicacion" data-role="button" data-transition="pop" data-theme="b"><img src="img/ubicacion.png" alt="" width="112" height="122"/></a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        </div>
+        <!--final Pruebas -->
+        
+        
+        <!--ubicacion-->
+        <div data-role="page" id="ubicacion" class="gallery-page">
+           <div id="img3">
+                    <img src="img/logo_v2.png" width="260" style="display:block; margin:0 auto">
+                </div>
+            <div data-role="content">
+            
+              <a data-ajax="false" href="tel:18005551234" id="cell" data-icon="custom" data-theme="b" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="top" data-inline="true" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-b"><span class="ui-btn-inner"><span class="ui-btn-text">Call Us</span><span class="ui-icon ui-icon-custom ui-icon-shadow">&nbsp;</span></span></a>
+              
+              <li class="ui-block-b"><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope ui-btn ui-btn-icon-top ui-btn-up-a" data-icon="custom" data-theme="a"><span class="ui-btn-inner"><span class="ui-btn-text">Email</span><span class="ui-icon ui-icon-custom ui-icon-shadow"></span></span></a></li>
+                   
+                   <!--test galeria-->
+            <div class="gallery">
+            
+                <div class="gallery-row">
+                    
+                    <div class="gallery-item"><a href="img/full/001.jpg" rel="external"><img src="img/thumb/001.jpg" alt="Image 001" /></a></div>
+                    
+                    <div class="gallery-item"><a href="img/full/002.jpg" rel="external"><img src="img/thumb/002.jpg" alt="Image 002" /></a></div>
+                    
+                    <div class="gallery-item"><a href="img/full/003.jpg" rel="external"><img src="img/thumb/003.jpg" alt="Image 003" /></a></div>
+                
+                </div>
+            </div>
+                                              
+            </div>
+            <div data-role="footer">
+           <div class="botonera" data-role="navbar"  data-position="fixed" data-fullscreen="true">
+                    <ul>
+                        <li>
+                            <a href="#servicios" data-role="button" data-transition="pop" data-theme="b"><img src="img/servicios.png" alt="" width="112" height="122"/></a>
+                        </li>
+                        <li><a href="#nosotros" data-role="button" data-transition="pop" data-theme="b"><img src="img/nosotros.png" width="112" height="122" alt=""/></a></li>
+                        <li>
+                           <a href="#pruebas" data-role="button" data-transition="pop" data-theme="b"><img src="img/pruebas.png" width="112" height="122" alt=""/></a>
+                        </li>
+                        <li>
+                            <a href="#page1" data-role="button" data-transition="flip" data-theme="b"><img src="img/inicio.png" alt="" width="112" height="122"/></a>
                         </li>
                     </ul>
                 </div>
