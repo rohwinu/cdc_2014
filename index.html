@@ -72,7 +72,14 @@
 		});
 	
 	</script>
-    
+    <script type="text/javascript">
+        function obtenerCosito()
+        {
+            /*var variable = $("#cosa").val();
+            $("#resultado").html("Este es su dato: "+variable);*/
+            $("#resultado").load("http://www.gatolocostudios.com/MobileCDC/index.html");                                
+        } 
+    </script>
         
         
     </head>
@@ -101,7 +108,8 @@
                         </div>
 					</span>
 			</div>
-            
+            <input type="submit" value="obtener" onclick="obtenerCosito();"/>
+                    <div id="resultado"></div>
             
         
         
