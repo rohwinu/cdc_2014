@@ -50,4 +50,6 @@
     <access origin="http://127.0.0.1*" />
     <access origin="http://gatolocostudios.com*" />
     <access origin="http://gatolocostudios.com/MobileCDC/*" />
+    <access origin="http://cdc.gatolocostudios.com/VersionMobile/*" />
+    <access origin="http://cdc.gatolocostudios.com/*" />
 </widget>
